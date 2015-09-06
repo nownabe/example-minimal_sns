@@ -1,2 +1,16 @@
-p
-  = link_to "Sign up", user_omniauth_authorize_path(:google_oauth2)
+#post-form.container
+  = form_tag(posts_url) do
+    .col-md-8
+      = text_area_tag :text, "", class: "form-control col-md-12"
+    .col-md-4
+      = submit_tag "Post", class: "btn btn-large btn-primary"
+
+= paginate @posts
+
+#posts.container
+  - @posts.each do |post|
+    .post
+      p.name = post.user.name
+      p.text = post.text
+
+= paginate @posts
