@@ -1,5 +1,13 @@
 source 'https://rubygems.org'
 
+gem "slim-rails"
+gem "kaminari"
+gem "twitter-bootstrap-rails"
+gem "devise"
+gem "omniauth-google-oauth2"
+gem "dotenv-rails"
+gem "better_errors"
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
 # Use sqlite3 as the database for Active Record
@@ -31,13 +39,6 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-gem "slim-rails"
-gem "kaminari"
-gem "twitter-bootstrap-rails"
-gem "devise"
-gem "omniauth-google-oauth2"
-gem "dotenv-rails"
-
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
@@ -46,5 +47,4 @@ end
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
-  gem "better_errors"
 end

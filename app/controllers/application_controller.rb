@@ -8,4 +8,8 @@ class ApplicationController < ActionController::Base
   def authenticate_user
     redirect_to sign_in_url unless user_signed_in?
   end
+
+  def after_sign_out_path_for(_)
+    "https://www.google.co.jp/"
+  end
 end
